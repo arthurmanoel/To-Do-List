@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: url(./images/img-paisagem.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: 2px solid #fff;
+  width: 35vw;
+  padding: 30px 40px;
+  min-width: 500px;
+  max-height: 600px;
+}
+
+.createTaskContainer {
+  background-color: #fff;
+  padding: 20px 30px;
+  height: 95px;
+  border-radius: 5px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.createTaskContainer input {
+  flex: 3;
+  padding: 12px;
+  border: 1px solid #d1d3d4;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.createTaskContainer input:hover {
+  border: 2px solid #41b883;
+}
+
+.createTaskContainer input:focus {
+  outline: none;
+  border: 2px solid #41b883;
+}
+
+.createTaskContainer button {
+  flex: 1;
+  padding: 12px;
+  margin-left: 12px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: #41b883;
+  color: #fff;
+  cursor: pointer;
+}
+
+.taskContainer {
+  width: 100%;
+  max-height: 400px;
+  padding: 30px 20px;
+  margin-top: 60px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: auto;
+}
+
+.task-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+}
+
+.task-item p {
+  width: 250px;
+  height: auto;
+  word-wrap: break-word;
+}
+
+.task-item i {
+  color: #41b883;
+  cursor: pointer;
+}
+
+/* Utilities */
+
+.error {
+  border: 2px solid red !important;
+}
+.error::placeholder {
+  color: red;
+}
+
+.task-completed {
+  text-decoration: line-through;
+}
+
+/* Responsiviness */
+
+@media (max-width: 1024px) {
+  .container {
+  }
+  .taskContainer {
+    height: 200px;
+  }
+}
+
+@media (max-width: 510px) {
+  .container {
+    min-width: 400px;
+  }
+
+  .createTaskContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 150px;
+  }
+
+  .createTaskContainer input {
+    width: 60vw;
+  }
+
+  .createTaskContainer input::placeholder {
+    text-align: center;
+  }
+
+  .createTaskContainer button {
+    margin: 0;
+    width: 25vw;
+  }
+
+  .taskContainer {
+    max-height: 230px;
+  }
+
+  .task-item p {
+    width: 150px;
+    height: auto;
+    word-wrap: break-word;
+  }
+}
+
+@media (max-width: 405px) {
+  .container {
+    min-width: 350px;
+  }
+
+  .task-item p {
+    width: 120px;
+  }
+}
+
+@media (max-width: 352px) {
+  .container {
+    min-width: 300px;
+  }
+
+  .createTaskContainer input {
+    width: 180px;
+  }
+
+  .createTaskContainer button {
+    width: 100px;
+  }
+
+  .task-item p {
+    width: 70px;
+  }
+}
